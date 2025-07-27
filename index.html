@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aayush Purohit | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Ensure Tailwind loads properly
+      if (typeof tailwind === 'undefined') {
+        // Fallback to CDN if Tailwind doesn't load
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css';
+        document.head.appendChild(link);
+      }
+    </script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+</head>
+<body class="text-white min-h-screen relative">
+    <div id="animated-bg" class="fixed inset-0 -z-10 w-full h-full"></div>
+   
+    <!-- Sticky Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 bg-black/20 backdrop-blur-md shadow-lg transition-all duration-300">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="text-2xl font-bold tracking-wider">Aayush Purohit</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link hover:text-cyan-400 transition-colors duration-300">Home</a>
+                <a href="#about" class="nav-link hover:text-cyan-400 transition-colors duration-300">About</a>
+                <a href="#skills" class="nav-link hover:text-cyan-400 transition-colors duration-300">Skills</a>
+                <a href="#experience" class="nav-link hover:text-cyan-400 transition-colors duration-300">Experience</a>
+                <a href="#education" class="nav-link hover:text-cyan-400 transition-colors duration-300">Education</a>
+                <a href="#leadership" class="nav-link hover:text-cyan-400 transition-colors duration-300">Leadership</a>
+                <a href="#contact" class="nav-link hover:text-cyan-400 transition-colors duration-300">Contact</a>
+            </div>
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-white hover:text-cyan-400 transition-colors duration-300" title="Toggle mobile menu">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-black/90 backdrop-blur-md">
+            <div class="container mx-auto py-4 px-6 space-y-4">
+                <a href="#home" class="block nav-link hover:text-cyan-400 transition-colors duration-300">Home</a>
+                <a href="#about" class="block nav-link hover:text-cyan-400 transition-colors duration-300">About</a>
+                <a href="#skills" class="block nav-link hover:text-cyan-400 transition-colors duration-300">Skills</a>
+                <a href="#experience" class="block nav-link hover:text-cyan-400 transition-colors duration-300">Experience</a>
+                <a href="#education" class="block nav-link hover:text-cyan-400 transition-colors duration-300">Education</a>
+                <a href="#leadership" class="block nav-link hover:text-cyan-400 transition-colors duration-300">Leadership</a>
+                <a href="#contact" class="block nav-link hover:text-cyan-400 transition-colors duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Home Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center relative">
+            <div class="container mx-auto text-center px-6">
+                <div class="w-56 h-56 rounded-full overflow-hidden border-4 border-cyan-400 shadow-lg mb-8 mx-auto">
+                    <img src="assets/profile.jpg" alt="Aayush Purohit Photo" class="object-cover w-full h-full" />
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold mb-4" data-aos="fade-up">
+                    Hi, I'm <span class="text-cyan-400">Aayush Purohit</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-8" data-aos="fade-up" data-aos-delay="200">
+                    Computer Science Undergraduate at VIT Vellore
+                </p>
+                <p class="text-lg text-gray-400 mb-12 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="400">
+                    Passionate about AI, Machine Learning, and Data Analytics. Ex-Intern at EY with expertise in Advanced Data Analytics and Statistical Modeling.
+                </p>
+                
+                <!-- Social Links -->
+                <div class="flex justify-center space-x-6 mb-12" data-aos="fade-up" data-aos-delay="600">
+                    <a href="mailto:ap.aayushpurohit@gmail.com" class="icon-btn" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/aayush-purohit-190368356/" target="_blank" rel="noopener" class="icon-btn" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/kingaayush" target="_blank" rel="noopener" class="icon-btn" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+
+                <!-- Scroll indicator -->
+                <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+                    <i class="fas fa-chevron-down text-cyan-400 text-2xl"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">
+                    About <span class="text-cyan-400">Me</span>
+                </h2>
+                <div class="max-w-4xl mx-auto">
+                    <div class="glass-card p-8" data-aos="fade-up" data-aos-delay="200">
+                        <p class="text-lg leading-relaxed mb-6">
+                            Hi, I am pursuing a B.Tech degree in Computer Science at VIT Vellore with a passion for web development, cloud computing, data structures, and object-oriented programming. Currently focused on developing technical skills through learning and collaborative projects.
+                        </p>
+                        <p class="text-lg leading-relaxed">
+                            I am deeply interested in AI and prompt engineering, and I believe in integrating AI into everyday life to create meaningful and efficient solutions. An active member of the Creativity Club, I enjoy contributing to team initiatives and events. Outside of academics, I'm passionate about basketball, swimming, and playing the guitar, which help me stay balanced, disciplined, and creative. Always eager to learn, grow, and explore new opportunities in technology.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">
+                    My <span class="text-cyan-400">Skills</span>
+                </h2>
+                
+                <!-- Technical Skills -->
+                <div class="mb-16" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-2xl font-semibold text-center mb-12 text-cyan-400">Technical Skills</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+                            <i class="fas fa-brain text-3xl text-cyan-400 mb-4"></i>
+                            <h4 class="text-lg font-semibold mb-2">Machine Learning</h4>
+                            <p class="text-sm text-gray-400">EY (Internship)</p>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+                            <i class="fas fa-robot text-3xl text-pink-400 mb-4"></i>
+                            <h4 class="text-lg font-semibold mb-2">Artificial Intelligence (AI)</h4>
+                            <p class="text-sm text-gray-400">EY (Internship)</p>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+                            <i class="fas fa-chart-line text-3xl text-green-400 mb-4"></i>
+                            <h4 class="text-lg font-semibold mb-2">Data Analytics</h4>
+                            <p class="text-sm text-gray-400">EY (Internship)</p>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
+                            <i class="fas fa-chart-bar text-3xl text-purple-400 mb-4"></i>
+                            <h4 class="text-lg font-semibold mb-2">Predictive Analytics</h4>
+                            <p class="text-sm text-gray-400">EY (Internship)</p>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="500">
+                            <i class="fas fa-code text-3xl text-blue-400 mb-4"></i>
+                            <h4 class="text-lg font-semibold mb-2">Data Structures & Algorithms</h4>
+                            <p class="text-sm text-gray-400">VIT</p>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="600">
+                            <i class="fas fa-cube text-3xl text-yellow-400 mb-4"></i>
+                            <h4 class="text-lg font-semibold mb-2">Object-Oriented Programming (OOP)</h4>
+                            <p class="text-sm text-gray-400">VIT</p>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="700">
+                            <i class="fab fa-python text-3xl text-green-500 mb-4"></i>
+                            <h4 class="text-lg font-semibold mb-2">Python</h4>
+                            <p class="text-sm text-gray-400">EY, VIT, Python Programming Course</p>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="800">
+                            <i class="fab fa-java text-3xl text-orange-500 mb-4"></i>
+                            <h4 class="text-lg font-semibold mb-2">Java</h4>
+                            <p class="text-sm text-gray-400">VIT</p>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="900">
+                            <i class="fas fa-code text-3xl text-blue-500 mb-4"></i>
+                            <h4 class="text-lg font-semibold mb-2">C</h4>
+                            <p class="text-sm text-gray-400">VIT</p>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="1000">
+                            <i class="fas fa-plus text-3xl text-blue-600 mb-4"></i>
+                            <h4 class="text-lg font-semibold mb-2">C++</h4>
+                            <p class="text-sm text-gray-400">VIT</p>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="1100">
+                            <i class="fab fa-html5 text-3xl text-orange-500 mb-4"></i>
+                            <h4 class="text-lg font-semibold mb-2">HTML, CSS, JavaScript, React</h4>
+                            <p class="text-sm text-gray-400">Frontend Technologies</p>
+                        </div>
+                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="1200">
+                            <i class="fas fa-users text-3xl text-cyan-400 mb-4"></i>
+                            <h4 class="text-lg font-semibold mb-2">Leadership</h4>
+                            <p class="text-sm text-gray-400">Team Management</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills & Languages -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8" data-aos="fade-up" data-aos-delay="400">
+                    <div class="glass-card p-6">
+                        <h3 class="text-xl font-semibold mb-4 text-cyan-400">Soft Skills</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Communication</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Teamwork</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Problem Solving</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i>Adaptability</li>
+                        </ul>
+                    </div>
+                    <div class="glass-card p-6">
+                        <h3 class="text-xl font-semibold mb-4 text-cyan-400">Languages</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center"><i class="fas fa-language text-blue-400 mr-3"></i>Marwadi (Native or Bilingual)</li>
+                            <li class="flex items-center"><i class="fas fa-language text-blue-400 mr-3"></i>English (Native or Bilingual)</li>
+                            <li class="flex items-center"><i class="fas fa-language text-blue-400 mr-3"></i>Hindi (Native or Bilingual)</li>
+                            <li class="flex items-center"><i class="fas fa-language text-blue-400 mr-3"></i>French (Limited Working)</li>
+                            <li class="flex items-center"><i class="fas fa-language text-blue-400 mr-3"></i>Marathi (Professional Working)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">
+                    Experience & <span class="text-cyan-400">Projects</span>
+                </h2>
+                <div class="max-w-4xl mx-auto space-y-8">
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-start space-x-6">
+                            <div class="w-16 h-16 bg-white/10 backdrop-blur-md rounded-lg flex items-center justify-center flex-shrink-0">
+                                <img src="assets/ey-logo.png" alt="EY Logo" class="w-12 h-8 object-contain" />
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold mb-2">Summer Intern at EY</h3>
+                                <p class="text-cyan-400 mb-2">May 2025 - June 2025 (2 months)</p>
+                                <p class="text-gray-400 mb-4">Mumbai, Maharashtra, India</p>
+                                <p class="text-gray-300 leading-relaxed">
+                                    Worked on Machine Learning, AI, Data Analytics, and Predictive Analytics projects as part of the Advanced Data Analytics team. Gained hands-on experience with real-world data analysis and statistical modeling techniques.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="flex items-start space-x-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-project-diagram text-white text-2xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold mb-2">Customer Churn Predictive Analysis</h3>
+                                <p class="text-gray-300 leading-relaxed mb-4">
+                                    Machine Learning project focused on predicting customer churn using advanced analytics and statistical modeling techniques. Implemented various ML algorithms to analyze customer behavior patterns.
+                                </p>
+                                <a href="https://github.com/kingaayush/Customer-Churn-Predictive-Analysis-Using-Machine-Learning" target="_blank" rel="noopener" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                                    <i class="fab fa-github mr-2"></i>
+                                    View Project
+                                    <i class="fas fa-external-link-alt ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">
+                    <span class="text-cyan-400">Education</span>
+                </h2>
+                <div class="max-w-4xl mx-auto">
+                    <div class="glass-card p-8" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-start space-x-6">
+                            <div class="w-16 h-16 bg-white/10 backdrop-blur-md rounded-lg flex items-center justify-center flex-shrink-0">
+                                <img src="assets/vit-logo.jpg" alt="VIT Logo" class="w-12 h-12 object-contain" />
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold mb-2">B.Tech in Computer Science and Engineering</h3>
+                                <p class="text-cyan-400 mb-2">Vellore Institute of Technology, VIT Vellore</p>
+                                <p class="text-gray-400">2023 – 2027</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership Section -->
+        <section id="leadership" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">
+                    Leadership & <span class="text-cyan-400">Extracurricular</span>
+                </h2>
+                <div class="max-w-4xl mx-auto space-y-8">
+                    <div class="glass-card p-8" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="text-2xl font-bold mb-6 text-cyan-400">Leadership & Initiatives</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-yellow-400 mr-3 mt-1"></i>
+                                <span class="text-gray-300">Active member of the Creativity Club, contributing to team initiatives and events</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-yellow-400 mr-3 mt-1"></i>
+                                <span class="text-gray-300">Led collaborative projects and team-based learning initiatives</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-yellow-400 mr-3 mt-1"></i>
+                                <span class="text-gray-300">Organized and participated in various technical and cultural events</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="glass-card p-8" data-aos="fade-up" data-aos-delay="400">
+                        <h3 class="text-2xl font-bold mb-6 text-cyan-400">Extracurricular Activities</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-basketball-ball text-orange-400 mr-3 mt-1"></i>
+                                <span class="text-gray-300">Passionate about basketball, swimming, and playing the guitar</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-music text-purple-400 mr-3 mt-1"></i>
+                                <span class="text-gray-300">These activities help maintain balance, discipline, and creativity</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-heart text-red-400 mr-3 mt-1"></i>
+                                <span class="text-gray-300">Always eager to learn, grow, and explore new opportunities in technology</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">
+                    Get In <span class="text-cyan-400">Touch</span>
+                </h2>
+                <div class="max-w-4xl mx-auto">
+                    <div class="glass-card p-8" data-aos="fade-up" data-aos-delay="200">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                            <div class="space-y-4">
+                                <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-600 rounded-full flex items-center justify-center mx-auto">
+                                    <i class="fas fa-envelope text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold">Email</h3>
+                                <a href="mailto:ap.aayushpurohit@gmail.com" class="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
+                                    ap.aayushpurohit@gmail.com
+                                </a>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto">
+                                    <i class="fab fa-linkedin text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold">LinkedIn</h3>
+                                <a href="https://www.linkedin.com/in/aayush-purohit-190368356/" target="_blank" rel="noopener" class="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
+                                    Connect with me
+                                </a>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="w-16 h-16 bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center mx-auto">
+                                    <i class="fab fa-github text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold">GitHub</h3>
+                                <a href="https://github.com/kingaayush" target="_blank" rel="noopener" class="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
+                                    View my projects
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center">
+        <div class="container mx-auto px-6">
+            <p class="text-gray-400">© 2024 Aayush Purohit. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
